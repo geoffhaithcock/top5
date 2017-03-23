@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-xs-6 col-md-4">
+    <div class="well">
+      <p><strong>Name:</strong>
+         <%= @song.name %>
+      </p>
+      <p><strong>Rating:</strong>
+         <% "#{@song.rating}".to_i.times do %>
+              <span class="glyphicon glyphicon-star"></span>
+         <% end %>
+      </p>
+      <p><strong>Artist:</strong>
+         <%= @song.artist.name %>
+      </p>
+    </div>
+  </div>
+</div>  
+<%= link_to 'New Song', new_song_path %> |
+<%= link_to 'Edit Song', edit_song_path(@song) %> |
+<%= link_to 'Jams Home', songs_path %>
